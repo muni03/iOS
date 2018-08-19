@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeGen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c0M-j4-rvP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeO-LM-6Rq">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.99308723913167385" green="1" blue="0.9553743246418519" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <barButtonItem title="Choose Photo" style="plain" id="n13-cg-LQG">
+                                        <connections>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" id="VJy-wv-hev"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="10" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fXx-rp-nAh">
+                                <rect key="frame" x="16" y="577" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2HA-6i-GFn">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="MemeMe" id="hHJ-iH-Cv0">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="2gG-bG-smw">
+                                            <connections>
+                                                <action selector="shareButton:" destination="BYZ-38-t0r" id="IBu-rk-Esy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="10" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rcW-kh-Jaq">
+                                <rect key="frame" x="16" y="74" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="c0M-j4-rvP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="62v-b7-3Rs"/>
+                            <constraint firstItem="c0M-j4-rvP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="99o-U5-84d"/>
+                            <constraint firstItem="fXx-rp-nAh" firstAttribute="trailing" secondItem="c0M-j4-rvP" secondAttribute="trailing" constant="-16" id="FFv-QF-zjy"/>
+                            <constraint firstItem="rcW-kh-Jaq" firstAttribute="leading" secondItem="c0M-j4-rvP" secondAttribute="leading" constant="16" id="GhY-rE-rNs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c0M-j4-rvP" secondAttribute="trailing" id="Gkk-tS-LTO"/>
+                            <constraint firstItem="yeO-LM-6Rq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ICk-94-bdg"/>
+                            <constraint firstItem="fXx-rp-nAh" firstAttribute="leading" secondItem="c0M-j4-rvP" secondAttribute="leading" constant="16" id="JOQ-ak-W0w"/>
+                            <constraint firstItem="yeO-LM-6Rq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mh1-AK-wwA"/>
+                            <constraint firstItem="fXx-rp-nAh" firstAttribute="bottom" secondItem="c0M-j4-rvP" secondAttribute="bottom" constant="-60" id="RyN-AO-2Jm"/>
+                            <constraint firstItem="rcW-kh-Jaq" firstAttribute="trailing" secondItem="c0M-j4-rvP" secondAttribute="trailing" constant="-16" id="X7A-V7-wfY"/>
+                            <constraint firstItem="c0M-j4-rvP" firstAttribute="bottom" secondItem="yeO-LM-6Rq" secondAttribute="top" constant="44" id="hr9-KK-986"/>
+                            <constraint firstItem="yeO-LM-6Rq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jaX-TA-IoZ"/>
+                            <constraint firstItem="rcW-kh-Jaq" firstAttribute="top" secondItem="c0M-j4-rvP" secondAttribute="top" constant="74" id="y3z-vR-LUc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imagePickerView" destination="c0M-j4-rvP" id="2eG-Pa-Pqi"/>
+                        <outlet property="navigationBar" destination="2HA-6i-GFn" id="oPm-k0-Ja5"/>
+                        <outlet property="shareButton" destination="2gG-bG-smw" id="f6m-SJ-SsO"/>
+                        <outlet property="textBot" destination="fXx-rp-nAh" id="Ich-gC-Mol"/>
+                        <outlet property="textTop" destination="rcW-kh-Jaq" id="3QK-0P-fy2"/>
+                        <outlet property="toolBar" destination="yeO-LM-6Rq" id="JE0-cg-GbM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
